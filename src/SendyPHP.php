@@ -209,7 +209,7 @@ class SendyPHP
 
         $http_request = $this->getHttpRequest();
         $http_request->setOption(CURLOPT_URL, $this->installation_url .'/'. $type);
-        $http_request->setOption(CURLOPT_HEADER, 0);
+        $http_request->setOption(CURLOPT_HTTPHEADER, array("Content-Type: application/x-www-form-urlencoded"));
         $http_request->setOption(CURLOPT_RETURNTRANSFER, 1);
         $http_request->setOption(CURLOPT_FOLLOWLOCATION, 1);
         $http_request->setOption(CURLOPT_POST, 1);
